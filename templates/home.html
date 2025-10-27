@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommandation Films & Musiques</title>
+
+</head>
+<body>
+    <h1>🎬 Films & 🎵 Musiques</h1>
+    <form method="POST">
+        <input name="film" placeholder="Entrez un film" value="{{ film }}">
+        <button type="submit">Recommander films</button>
+        <br><br>
+        <input name="song" placeholder="Entrez une chanson" value="{{ song }}">
+        <button type="submit">Recommander musiques</button>
+    </form>
+
+    {% if recommendations_movies %}
+        <h2>Films similaires :</h2>
+        <ul>
+        {% for m in recommendations_movies %}
+            <li>{{ m }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    {% if recommendations_songs %}
+        <h2>Musiques similaires :</h2>
+        <ul>
+        {% for s in recommendations_songs %}
+            <li>{{ s }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
