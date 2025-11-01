@@ -23,8 +23,10 @@ Les fichiers de modèles (`movies_model.pkl`, `music_model.pkl`) **ne sont pas i
 Tu peux les **recréer toi-même** en suivant les étapes ci-dessous 👇
 
 ###  1. Aller dans le dossier `models/`
-```bash
 cd models
+recréer (`movies_model.pkl`, `music_model.pkl`) 
+```bash
+
 
 
 python train_models.py
